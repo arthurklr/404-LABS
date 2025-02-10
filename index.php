@@ -22,12 +22,17 @@
     <!-- Locomotive Scroll pour un défilement fluide -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.css">
     <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.min.js"></script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body data-scroll-container>
     <!-- Navigation -->
     <nav class="nav">
-        <div class="nav__logo">404 LABS</div>
+        <a href="#" class="nav__logo">
+            <div class="logo__glitch">404</div>
+            <span class="logo__text">LABS</span>
+        </a>
         <div class="nav__menu">
             <a href="#accueil">Accueil</a>
             <a href="#services">Services</a>
@@ -38,58 +43,44 @@
 
     <!-- Hero Section -->
     <section id="accueil" class="hero">
-        <div class="hero__content">
-            <h1 class="hero__title">404 LABS</h1>
-            <p class="hero__subtitle">Créons ensemble votre présence numérique</p>
-            <div class="hero__scroll-indicator"></div>
-        </div>
-        <canvas id="webgl"></canvas>
-    </section>
+        <div class="hero__container">
+            <div class="hero__left">
+                <h1 class="hero__title">
+                    <span class="hero__title-line">CRÉATIVITÉ</span>
+                    <span class="hero__title-line">INNOVATION</span>
+                    <span class="hero__title-line">DIGITAL</span>
+                </h1>
+                
+                <div class="hero__text">
+                    <p class="hero__lead">
+                        Studio digital spécialisé dans la création d'expériences web uniques.
+                    </p>
+                </div>
 
-    <!-- Section laptop qui contiendra tout le reste du site -->
-    <section class="laptop-section">
-        <div class="laptop-container">
-            <img src="images/laptop-design.png" alt="Laptop" class="laptop-image">
-            <div class="laptop-screen">
-                <div class="screen-content">
-                    <!-- Tout le contenu du site ici -->
-                    <section id="services" class="services">
-                        <h2>Nos Services</h2>
-                        <div class="services__grid">
-                            <div class="service-card">
-                                <h3>Développement Web</h3>
-                                <p>Sites web sur mesure, applications web, e-commerce</p>
-                            </div>
-                            <div class="service-card">
-                                <h3>Design UI/UX</h3>
-                                <p>Interfaces modernes et expériences utilisateur uniques</p>
-                            </div>
-                            <div class="service-card">
-                                <h3>Animation & Interaction</h3>
-                                <p>Effets visuels, animations GSAP, expériences immersives</p>
-                            </div>
-                        </div>
-                    </section>
+                <a href="#projets" class="hero__cta">
+                    <span>Découvrir nos projets</span>
+                    <span class="cta__arrow">→</span>
+                </a>
+            </div>
 
-                    <section id="projets" class="projets">
-                        <h2>Nos Réalisations</h2>
-                        <div class="projets__container">
-                            <!-- Les projets seront ajoutés dynamiquement via JS -->
-                        </div>
-                    </section>
-
-                    <section id="contact" class="contact">
-                        <h2>Contactez-nous</h2>
-                        <form class="contact__form">
-                            <input type="text" placeholder="Nom" required>
-                            <input type="email" placeholder="Email" required>
-                            <textarea placeholder="Votre message" required></textarea>
-                            <button type="submit">Envoyer</button>
-                        </form>
-                    </section>
+            <div class="hero__right">
+                <div class="hero__stats">
+                    <div class="stat">
+                        <span class="stat__value" data-value="150">150</span>
+                        <span class="stat__label">Projets</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__value" data-value="98">98</span>
+                        <span class="stat__label">Clients</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat__value" data-value="5">5</span>
+                        <span class="stat__label">Prix</span>
+                    </div>
                 </div>
             </div>
         </div>
+        <canvas id="webgl"></canvas>
     </section>
 
     <!-- Footer -->
